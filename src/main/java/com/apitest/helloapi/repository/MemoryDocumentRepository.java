@@ -33,4 +33,8 @@ public class MemoryDocumentRepository {
         return findDocument;
     }
 
+    public void deleteById(Long id){
+        store.remove(id);
+    }
+
 }

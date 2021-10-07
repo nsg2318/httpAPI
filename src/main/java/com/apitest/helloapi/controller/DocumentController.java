@@ -42,6 +42,11 @@ public class DocumentController {
         return result;
     }
 
+    @DeleteMapping("/delete/{id}")
+    public void deleteById(@PathVariable Long id){
+        memoryDocumentRepository.deleteById(id);
+    }
+
 
 //    @PostMapping
 //    public String createCrew(@ModelAttribute("crew") CrewCreateDto crewCreateDto){
@@ -50,7 +55,7 @@ public class DocumentController {
 //        return "crew/welcome";
 //    }
 
-
+//https://devkingdom.tistory.com/110
     //test용도
     @PostConstruct
     public void init() {
